@@ -1,0 +1,241 @@
+/* বেসিক রিসেট ও ফন্ট */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    display: flex;
+    background-color: #121212;
+    /* ডার্ক চারকোল ব্যাকগ্রাউন্ড */
+    background-image: radial-gradient(circle at top right, #2a2a2a, #121212);
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* সাইডবার ডিজাইন */
+.sidebar {
+    width: 280px;
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(212, 175, 55, 0.15);
+    /* গোল্ডেন বর্ডার */
+    height: 100vh;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-area {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-area h2 {
+    color: #D4AF37;
+    /* প্রিমিয়াম গোল্ড */
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.logo-area p {
+    color: #888;
+    font-size: 12px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #a0a0a0;
+    font-weight: 500;
+}
+
+.sidebar ul li i {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar ul li:hover {
+    background: rgba(212, 175, 55, 0.05);
+    color: #D4AF37;
+    transform: translateX(5px);
+}
+
+.sidebar ul li.active {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent);
+    color: #D4AF37;
+    border-left: 3px solid #D4AF37;
+}
+
+/* মেইন কন্টেন্ট এরিয়া */
+.main-content {
+    flex: 1;
+    padding: 40px 50px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #888;
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 20px 8px 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: #D4AF37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    font-size: 18px;
+}
+
+/* Glassmorphism কার্ড */
+.glass-card {
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 700px;
+}
+
+/* ফর্ম ডিজাইন */
+.input-row {
+    margin-bottom: 25px;
+}
+
+.input-row.split {
+    display: flex;
+    gap: 20px;
+}
+
+.input-row.split .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #b0b0b0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    /* আইকনের জন্য জায়গা */
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.form-group input:focus+i,
+.input-with-icon input:focus~i {
+    color: #D4AF37;
+    /* টাইপ করার সময় আইকন গোল্ডেন হবে */
+}
+
+/* সাবমিট বাটন */
+.btn-submit {
+    background: linear-gradient(135deg, #D4AF37 0%, #aa8529 100%);
+    color: #121212;
+    border: none;
+    padding: 16px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}

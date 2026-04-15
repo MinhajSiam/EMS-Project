@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium EMS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-area">
+            <h2><i class="fa-solid fa-graduation-cap"></i> EMS Portal</h2>
+            <p>সালাহউদ্দিন আহমেদ স্কুল এন্ড কলেজ</p>
+        </div>
+        <ul>
+            <li class="active"><i class="fa-solid fa-chart-pie"></i> ড্যাশবোর্ড</li>
+            <li><i class="fa-solid fa-user-plus"></i> নতুন ভর্তি</li>
+            <li><i class="fa-solid fa-users"></i> শিক্ষার্থী তালিকা</li>
+            <li><i class="fa-solid fa-clipboard-list"></i> রেজাল্ট ম্যানেজমেন্ট</li>
+            <li><i class="fa-solid fa-gear"></i> সেটিংস</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div>
+                <h1>নতুন শিক্ষার্থী ভর্তি</h1>
+                <p class="subtitle">সিস্টেমে নতুন শিক্ষার্থীর তথ্য যুক্ত করুন</p>
+            </div>
+            <div class="user-profile">
+                <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <span>অ্যাডমিন</span>
+            </div>
+        </header>
+
+        <div class="glass-card">
+            <form id="admissionForm">
+                <div class="input-row">
+                    <div class="form-group">
+                        <label>শিক্ষার্থীর নাম</label>
+                        <div class="input-with-icon">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="name" placeholder="শিক্ষার্থীর পূর্ণ নাম লিখুন" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-row split">
+                    <div class="form-group">
+                        <label>শ্রেণী</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-book"></i>
+                            <input type="text" id="class" placeholder="যেমন: দশম" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>রোল নম্বর</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <input type="number" id="roll" placeholder="যেমন: ০১" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-check-circle"></i> ভর্তি কনফার্ম করুন
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
