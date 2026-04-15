@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium EMS Dashboard</title>
+    <title>Cinematic EMS Portal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,65 +12,61 @@
 <body>
     <div class="sidebar">
         <div class="logo-area">
-            <h2><i class="fa-solid fa-graduation-cap"></i> EMS Portal</h2>
+            <h2><i class="fa-solid fa-layer-group"></i> EMS</h2>
             <p>সালাহউদ্দিন আহমেদ স্কুল এন্ড কলেজ</p>
         </div>
         <ul>
-            <li class="active"><i class="fa-solid fa-chart-pie"></i> ড্যাশবোর্ড</li>
+            <li class="active"><i class="fa-solid fa-border-all"></i> ড্যাশবোর্ড</li>
             <li><i class="fa-solid fa-user-plus"></i> নতুন ভর্তি</li>
             <li><i class="fa-solid fa-users"></i> শিক্ষার্থী তালিকা</li>
-            <li><i class="fa-solid fa-clipboard-list"></i> রেজাল্ট ম্যানেজমেন্ট</li>
-            <li><i class="fa-solid fa-gear"></i> সেটিংস</li>
+            <li><i class="fa-solid fa-folder-open"></i> রেজাল্ট পোর্টাল</li>
+            <li><i class="fa-solid fa-sliders"></i> সেটিংস</li>
         </ul>
     </div>
 
     <div class="main-content">
         <header>
-            <div>
-                <h1>নতুন শিক্ষার্থী ভর্তি</h1>
-                <p class="subtitle">সিস্টেমে নতুন শিক্ষার্থীর তথ্য যুক্ত করুন</p>
+            <div class="header-text">
+                <h1>অ্যাডমিশন মডিউল</h1>
+                <p class="subtitle">নতুন শিক্ষার্থীর ডেটাবেস এন্ট্রি</p>
             </div>
             <div class="user-profile">
-                <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
-                <span>অ্যাডমিন</span>
+                <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
             </div>
         </header>
 
-        <div class="glass-card">
+        <div class="minimal-card">
             <form id="admissionForm">
                 <div class="input-row">
                     <div class="form-group">
-                        <label>শিক্ষার্থীর নাম</label>
-                        <div class="input-with-icon">
-                            <i class="fa-regular fa-user"></i>
-                            <input type="text" id="name" placeholder="শিক্ষার্থীর পূর্ণ নাম লিখুন" required>
-                        </div>
+                        <label>শিক্ষার্থীর পূর্ণ নাম</label>
+                        <input type="text" id="name" placeholder="যেমন: মো. তরিকুল ইসলাম" required autocomplete="off">
                     </div>
                 </div>
 
                 <div class="input-row split">
                     <div class="form-group">
-                        <label>শ্রেণী</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-book"></i>
-                            <input type="text" id="class" placeholder="যেমন: দশম" required>
-                        </div>
+                        <label>অধ্যয়নের শ্রেণী</label>
+                        <input type="text" id="class" placeholder="যেমন: একাদশ" required autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <label>রোল নম্বর</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-hashtag"></i>
-                            <input type="number" id="roll" placeholder="যেমন: ০১" required>
-                        </div>
+                        <label>অ্যাসাইনড রোল</label>
+                        <input type="number" id="roll" placeholder="যেমন: ১০১" required autocomplete="off">
                     </div>
                 </div>
 
                 <button type="submit" class="btn-submit">
-                    <i class="fa-solid fa-check-circle"></i> ভর্তি কনফার্ম করুন
+                    ডেটা সেভ করুন <i class="fa-solid fa-arrow-right-long"></i>
                 </button>
             </form>
         </div>
     </div>
+
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">ডেটা সফলভাবে সংরক্ষিত হয়েছে!</span>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
